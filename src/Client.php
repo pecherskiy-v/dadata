@@ -487,6 +487,37 @@ class Client
     }
 
     /**
+     * адрес.
+     *
+     * @param string $address
+     *
+     * @return \SplObjectStorage
+     * @throws GuzzleException
+     * @throws \ReflectionException
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     */
+    public function suggestAddress($address, $count = 1)
+    {
+        $response = $this->query(
+            $this->prepareSuggestionsUri('suggest/address'),
+            [
+                'query' => $address,
+                'count' => $count
+            ]
+        );
+
+        return $response;
+        // $collection = new \SplObjectStorage();
+
+        // foreach ($response as $arParty) {
+        //     $party = $this->populateParty($arParty);
+        //     $collection->attach($party);
+        // }
+        // return $collection;
+    }
+
+    /**
      * Prepares suggest URI for the request.
      *
      * @param string $endpoint

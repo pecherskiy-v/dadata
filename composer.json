@@ -1,5 +1,5 @@
 {
-  "name": "gietos/dadata",
+  "name": "pecherskiy-v/dadata",
   "description": "Dadata API client (https://dadata.ru)",
   "minimum-stability": "stable",
   "license": "MIT",
@@ -11,6 +11,10 @@
     {
       "name": "Sergey Kasatkin",
       "email": "spam@onsky.ru"
+    },
+    {
+      "name": "Pecherskiy Valeriy",
+      "email": "pecherskiy.v@gmail.com"
     }
   ],
   "require": {
