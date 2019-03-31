@@ -497,7 +497,7 @@ class Client
      * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
-    public function suggestAddress($address, $count = 1)
+    public function suggestAddress($address, $count = 2)
     {
         $response = $this->query(
             $this->prepareSuggestionsUri('suggest/address'),
@@ -508,13 +508,6 @@ class Client
         );
 
         return $response;
-        // $collection = new \SplObjectStorage();
-
-        // foreach ($response as $arParty) {
-        //     $party = $this->populateParty($arParty);
-        //     $collection->attach($party);
-        // }
-        // return $collection;
     }
 
     /**

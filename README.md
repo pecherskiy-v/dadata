@@ -36,4 +36,8 @@ $response = $client->cleanName('Срегей владимерович ивано
 $response = $client->cleanEmail('serega@yandex/ru');
 $response = $client->cleanDate('24/3/12');
 $response = $client->cleanVehicle('форд фокус')
+$response = $client->suggestAddress('Нижнего Новгорода, ул. Большая Покровская, д. 62');
+
+echo $response[0]['data']['street_with_type']; // ул Большая Покровская
+
 ```
